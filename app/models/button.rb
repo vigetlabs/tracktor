@@ -1,6 +1,6 @@
 class Button < ActiveRecord::Base
 
-  has_many :time_entries
+  has_many :time_entries, :dependent => :destroy
 
   belongs_to :task
   belongs_to :user

@@ -56,6 +56,6 @@ class HarvestSeeder
   end
 
   def client
-    @client ||= user.client
+    @user.client
   end
 end
