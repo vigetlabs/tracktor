@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'harvested',    '~> 3.1.0'
 gem 'awesome_print'
 gem 'httparty'
+gem 'rails_12factor', '~> 0.0.2'
 
 group :development, :test do
   gem 'pry'
