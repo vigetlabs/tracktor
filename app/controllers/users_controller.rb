@@ -4,14 +4,24 @@ class UsersController < ApplicationController
     redirect_to "/home" if logged_in?
   end
 
-  def show
-    redirect_to "/" if !logged_in?
-  end
-
   def create
     user = User.oauth_create(params[:code])
     cookies.permanent[:user_token] = user.token
 
+    redirect_to "/"
+  end
+
+  def show
+    redirect_to "/" if !logged_in?
+  end
+
+  def update
+    ButtonSetter.new(params, current_user).set
+    redirect_to "/"
+  end
+
+  def reconfigure
+    HarvestSeeder.seed(current_user)
     redirect_to "/"
   end
 

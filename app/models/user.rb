@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
       user.update_attributes(user_params)
     else
       user = create(user_params)
-      HarvestSeeder.seed_projects_and_tasks(user)
+      HarvestSeeder.seed(user)
     end
 
     user

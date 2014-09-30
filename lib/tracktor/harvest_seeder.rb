@@ -1,10 +1,10 @@
 class HarvestSeeder
 
-  def self.seed_projects_and_tasks(user)
+  def self.seed(user)
     seeder = new(user)
 
     seeder.seed_projects_and_tasks
-    seeder.clear_out_old_things
+    seeder.clear_stale_records
   end
 
   def initialize(user)
@@ -21,7 +21,7 @@ class HarvestSeeder
     end
   end
 
-  def clear_out_old_things
+  def clear_stale_records
     project_ids = harvest_data.map{|p| p["id"]}
 
     @user.projects.each do |project|
