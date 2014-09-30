@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "users#index"
+  get "/home",   to: "users#show"
+  get "/auth",   to: "users#create"
+  get "/logout", to: "users#destroy"
 
-  get "/home", to: "home#show"
-
-  get "/auth",   to: "sessions#create"
-  get "/logout", to: "sessions#destroy"
+  get "/toggle",        to: "utility#toggle"
+  get "/running_timer", to: "utility#running_timer"
 end
