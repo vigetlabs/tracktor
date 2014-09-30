@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+ .hint {
+   color: #777;
+   font-style: italic;
+ }
+
+ .time-td {
+   min-width: 80px;
+ }
+
+ .actions-td {
+   min-width: 145px;
+ }
+
+ a.navbar-brand {
+   font-size: 30px;
+   line-height: 30px;
+   height: 55px;
+ }
+
+.navbar-header {
+  width: 100%;
+}
+
+.navbar-right {
+  a {
+    margin-top: 5px;
+    font-size: 17px;
+  }
+}
