@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    ButtonSetter.new(params, current_user).set
+    ParamsHandler.new(params, current_user).update
     redirect_to "/"
   end
 

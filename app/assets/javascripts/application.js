@@ -41,3 +41,11 @@ $(".projects-select").each(function(){
     $taskSelect.trigger("chosen:updated");
   })
 })
+
+$("#js-core-id").click(function(e) {
+  existingId = $("#js-core-id").data("existingId");
+  $("#js-core-id").replaceWith('<input id="core_id" name="core_id" type="text">');
+
+  $("#core_id").val(existingId);
+  $("#core_id").focus();
+})
