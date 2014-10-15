@@ -11,11 +11,11 @@ class ButtonHandler
 
   def handle
     if button && existing_time_entry
-      { success: true, on: toggle_timer(existing_time_entry) }
+      toggle_timer(existing_time_entry) ? "on" : "off"
     elsif button && button.new_time_entry
-      { success: true, on: true }
+      "on"
     else
-      { success: false }
+      "false"
     end
   end
 

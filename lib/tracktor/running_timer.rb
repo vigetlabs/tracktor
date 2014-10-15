@@ -10,9 +10,9 @@ class RunningTimer
 
   def find
     if running_timer && time_entry
-      { running: true, button: time_entry.button.number }
+      time_entry.button.number
     else
-      { :running => false }
+      "off"
     end
   end
 

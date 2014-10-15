@@ -1,31 +1,31 @@
 class UtilityController < ApplicationController
 
   def toggle
-    respond_with_json do
+    respond_with_text do
       if token_user.present?
         ButtonHandler.handle(params[:button], token_user)
       else
-        { :invalid_user => true }
+        "invalid"
       end
     end
   end
 
   def running_timer
-    respond_with_json do
+    respond_with_text do
       if token_user.present?
         RunningTimer.find(token_user)
       else
-        { :invalid_user => true }.to_json
+        "invalid"
       end
     end
   end
 
   private
 
-  def respond_with_json
+  def respond_with_text
     body = yield
 
-    render :json => body
+    render :text => body
   end
 
   def token_user
