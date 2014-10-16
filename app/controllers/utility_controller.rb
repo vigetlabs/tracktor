@@ -20,12 +20,17 @@ class UtilityController < ApplicationController
     end
   end
 
+  def identify
+    user = User.find_by(core_id: params[:core_id])
+    render text: user.try(:token) || "nothing"
+  end
+
   private
 
   def respond_with_text
     body = yield
 
-    render :text => body
+    render text: body
   end
 
   def token_user

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get "/toggle",        to: "utility#toggle"
   get "/running_timer", to: "utility#running_timer"
+  get "/identify",      to: "utility#identify"
 end
