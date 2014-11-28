@@ -18,3 +18,5 @@ You'll need the harvest API credentials from [vigesafe](http://vigesafe.lab.vige
 ###Testing
 
 There are no tests.
+
+This is an extra line
