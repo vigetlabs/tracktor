@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141015214925) do
+ActiveRecord::Schema.define(version: 20190215215209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20141015214925) do
     t.string   "harvest_refresh_token"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "core_id"
+    t.string   "device_id"
   end
 
 end

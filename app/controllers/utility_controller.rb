@@ -21,7 +21,7 @@ class UtilityController < ApplicationController
   end
 
   def identify
-    user = User.find_by(core_id: params[:core_id])
+    user = User.find_by(device_id: params[:device_id])
     render text: user.try(:token) || "nothing"
   end
 

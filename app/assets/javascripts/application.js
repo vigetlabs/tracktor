@@ -44,8 +44,8 @@ $(".projects-select").each(function(){
 
 $("#js-core-id").click(function(e) {
   existingId = $("#js-core-id").data("existingId");
-  $("#js-core-id").replaceWith('<input id="core_id" name="core_id" type="text">');
+  $("#js-core-id").replaceWith('<input id="device_id" name="device_id" type="text">');
 
-  $("#core_id").val(existingId);
-  $("#core_id").focus();
+  $("#device_id").val(existingId);
+  $("#device_id").focus();
 })

@@ -6,15 +6,15 @@ class ParamsHandler
   end
 
   def update
-    update_core_id
+    update_device_id
     update_buttons
   end
 
   private
 
-  def update_core_id
-    if @params[:core_id].present?
-      @user.update_attributes(core_id: @params[:core_id])
+  def update_device_id
+    if @params[:device_id].present?
+      @user.update_attributes(device_id: @params[:device_id])
     end
   end
 
